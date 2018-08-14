@@ -24,7 +24,6 @@ from employees
 where first_name = 'Kokou'
 group by gender;
 
-
 select * from employees
 where first_name = 'Kokou' and gender = 'F';
 
@@ -34,3 +33,9 @@ where month_fy between 5 and 8
 group by genre
 order by plays DESC
 limit 10;
+
+# Aliases in tables and detail
+
+select concat_ws(' ', first_name, last_name) AS full_name
+from employees AS emp
+where emp.emp_no > 20000
